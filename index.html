@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Фото галерея</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+<body>
+  <div id="bg_for_big_image">
+    <img src="empty.png" alt="" srcset="">
+  </div>
+    <div id="big_image" onclick="CloseImage()"> 
+        <img src="empty.png" onclick="CloseImage()" id="img_in_big" alt="" srcset="">
+    </div>
+    <div id="bar_before">
+        <ul>
+          <!--Image thumbnails added using JS-->
+        </ul>
+      </div>
+      <main onscroll="refreshBars()">
+        <ul>
+          <li style="padding: 20px; font-size: 20px;line-height: 150%;" class="cool_font">От всей души, с любовью 
+            <br><a href="https://vk.com/svetlana.malkova7" style="font-size: 24px; font-weight: 900;"><span class="hue_rotate">❤️</span>Третьяковой Светлане Сергеевне<span class="hue_rotate">❤️</span></a>
+            <br>Представляем фото-альбом, который (мы надеемся) будет греть душу еще не один год
+            <br>5 группа, 2024 год выпуска<br><span style="font-size: 10px; color: rgb(29, 29, 29);">code by Степа c;</span></li>
+
+            <li><img id="img_0" src="empty.png" data-image="1" alt="SAMPLE TEXT" onclick="OpenImage(this)"/>Богдашка Ишамятов (aka Бага)</li>
+            <li><img id="img_1" src="empty.png" data-image="2" alt="SAMPLE TEXT" onclick="OpenImage(this)"/>Степа который так и не перевелся к программистам</li>
+            <li><img id="img_2" src="empty.png" data-image="3" alt="SAMPLE TEXT" onclick="OpenImage(this)"/></li>
+            <li><img id="img_3" src="empty.png" data-image="4" alt="SAMPLE TEXT" onclick="OpenImage(this)"/></li>
+            <li><img id="img_4" src="empty.png" data-image="5" alt="SAMPLE TEXT" onclick="OpenImage(this)"/></li>
+            <li><img id="img_5" src="empty.png" data-image="6" alt="SAMPLE TEXT" onclick="OpenImage(this)"/>Димусик Соколовский, или же староста</li>
+            <li><img id="img_6" src="empty.png" data-image="7" alt="SAMPLE TEXT" onclick="OpenImage(this)"/>Максончик Куцман (aka темщик)</li>
+            <li><img id="img_7" src="empty.png" data-image="8" alt="SAMPLE TEXT" onclick="OpenImage(this)"/></li>
+            <li><img id="img_8" src="empty.png" data-image="9" alt="SAMPLE TEXT" onclick="OpenImage(this)"/>Никитка Филатов</li>
+            <li><img id="img_9" src="empty.png" data-image="10" alt="SAMPLE TEXT" onclick="OpenImage(this)"/>"Волки"</li>
+            <li><img id="img_10" src="empty.png" data-image="11" alt="SAMPLE TEXT" onclick="OpenImage(this)"/>"Волки", но спокойнее</li>
+            <li><img id="img_11" src="empty.png" data-image="12" alt="SAMPLE TEXT" onclick="OpenImage(this)"/></li>
+            <li><img id="img_12" src="empty.png" data-image="13" alt="SAMPLE TEXT" onclick="OpenImage(this)"/></li>
+            <li><img id="img_13" src="empty.png" data-image="14" alt="SAMPLE TEXT" onclick="OpenImage(this)"/></li>
+            <li><img id="img_14" src="empty.png" data-image="15" alt="SAMPLE TEXT" onclick="OpenImage(this)"/></li>
+            <li><img id="img_15" src="empty.png" data-image="16" alt="SAMPLE TEXT" onclick="OpenImage(this)"/></li>
+            <li><img id="img_16" src="empty.png" data-image="17" alt="SAMPLE TEXT" onclick="OpenImage(this)"/></li>
+            <li><img id="img_17" src="empty.png" data-image="18" alt="SAMPLE TEXT" onclick="OpenImage(this)"/></li>
+            <li><img id="img_18" src="empty.png" data-image="19" alt="SAMPLE TEXT" onclick="OpenImage(this)"/>Егорка (aka хамелеон)</li>
+            <li><img id="img_19" src="empty.png" data-image="20" alt="SAMPLE TEXT" style="margin-bottom: 10px;" onclick="OpenImage(this)"/><img style="height: 100px; margin-top: 0;" data-image="baga" src="thumbs/baga.jpg" alt=""></li>
+            <li><img id="img_20" src="empty.png" data-image="21" alt="SAMPLE TEXT" onclick="OpenImage(this)"/>Верунчик (aka начерти схему за сотку пж)</li>
+            <li><img id="img_21" src="empty.png" data-image="22" alt="SAMPLE TEXT" onclick="OpenImage(this)"/>Илюшка Качанов, зам старосты</li>
+            <li><img id="img_22" src="empty.png" data-image="23" alt="SAMPLE TEXT" onclick="OpenImage(this)"/></li>
+            <li><img id="img_23" src="empty.png" data-image="24" alt="SAMPLE TEXT" onclick="OpenImage(this)"/></li>
+            <li><img id="img_24" src="empty.png" data-image="25" alt="SAMPLE TEXT" onclick="OpenImage(this)"/></li>
+            <li><img id="img_25" src="empty.png" data-image="26" alt="SAMPLE TEXT" onclick="OpenImage(this)"/>Ну тут понятно на что отсылка</li>
+            <li><img id="img_26" src="empty.png" data-image="27" alt="SAMPLE TEXT" onclick="OpenImage(this)"/>Мишка Цыков</li>
+            <li><img id="img_27" src="empty.png" data-image="28" alt="SAMPLE TEXT" onclick="OpenImage(this)"/>Никитка Логвинов (aka никлог), фотограф</li>
+            <li><img id="img_28" src="empty.png" data-image="29" alt="SAMPLE TEXT" onclick="OpenImage(this)"/>Диман Крутелев (aka хасан, сопля, пчела, осел и т.д.)</li>
+            <li><img id="img_29" src="empty.png" data-image="30" alt="SAMPLE TEXT" onclick="OpenImage(this)"/>Димусик Волков</li>
+            <li><img id="img_30" src="empty.png" data-image="31" alt="SAMPLE TEXT" onclick="OpenImage(this)"/>Опять Егорка</li>
+            <li><img id="img_31" src="empty.png" data-image="32" alt="SAMPLE TEXT" onclick="OpenImage(this)"/>С Димасиком (не геи)</li>
+            <li><img id="img_32" src="empty.png" data-image="33" alt="SAMPLE TEXT" onclick="OpenImage(this)"/>Дениска Павлов (aka алкаш, самурай)</li>
+            <li><img id="img_33" src="empty.png" data-image="34" alt="SAMPLE TEXT" onclick="OpenImage(this)"/></li>
+            <li><img id="img_34" src="empty.png" data-image="35" alt="SAMPLE TEXT" onclick="OpenImage(this)"/>Богдан Якушин</li>
+            <li><img id="img_35" src="empty.png" data-image="36" alt="SAMPLE TEXT" onclick="OpenImage(this)"/></li>
+            <li><img id="img_36" src="empty.png" data-image="37" alt="SAMPLE TEXT" onclick="OpenImage(this)"/></li>
+            <li><img id="img_37" src="empty.png" data-image="38" alt="SAMPLE TEXT" onclick="OpenImage(this)"/></li>
+            <li><img id="img_38" src="empty.png" data-image="39" alt="SAMPLE TEXT" onclick="OpenImage(this)"/>Егор Плотский (aka футбол)</li>
+            <li><img id="img_39" src="empty.png" data-image="40" alt="SAMPLE TEXT" onclick="OpenImage(this)"/>Кирилл Климов (aka клим, молодой отец)</li>
+            <li><img id="img_40" src="empty.png" data-image="41" alt="SAMPLE TEXT" onclick="OpenImage(this)"/>Данил Курганов (aka химик)</li>
+            <li><img id="img_41" src="empty.png" data-image="42" alt="SAMPLE TEXT" onclick="OpenImage(this)"/>Мишка Баранов (aka бебрик)</li>
+            <li><img id="img_42" src="empty.png" data-image="43" alt="SAMPLE TEXT" onclick="OpenImage(this)"/>Саня Подгорных</li>
+            <li><img id="img_43" src="empty.png" data-image="44" alt="SAMPLE TEXT" onclick="OpenImage(this)"/></li>
+            <li><img id="img_44" src="empty.png" data-image="45" alt="SAMPLE TEXT" onclick="OpenImage(this)"/>Никитка Сиваков (aka Сива)</li>
+            <li><img id="img_45" src="empty.png" data-image="46" alt="SAMPLE TEXT" onclick="OpenImage(this)"/></li>
+            <li><img id="img_46" src="empty.png" data-image="47" alt="SAMPLE TEXT" onclick="OpenImage(this)"/></li>
+            <li><img id="img_47" src="empty.png" data-image="48" alt="SAMPLE TEXT" onclick="OpenImage(this)"/></li>
+            <li style="padding: 20px; font-size: 20px;line-height: 150%;" class="cool_font">А теперь исторические моменты со всего обучения</li>
+            <li><img id="img_48" src="empty.png" data-image="49" alt="SAMPLE TEXT" onclick="OpenImage(this)"/></li>
+            <li><img id="img_49" src="empty.png" data-image="50" alt="SAMPLE TEXT" onclick="OpenImage(this)"/></li> 
+            <li><img id="img_50" src="empty.png" data-image="51" alt="SAMPLE TEXT" onclick="OpenImage(this)"/></li> 
+            <li><img id="img_51" src="empty.png" data-image="52" alt="SAMPLE TEXT" onclick="OpenImage(this)"/></li> 
+            <li><img id="img_52" src="empty.png" data-image="53" alt="SAMPLE TEXT" onclick="OpenImage(this)"/></li> 
+            <li><img id="img_53" src="empty.png" data-image="54" alt="SAMPLE TEXT" onclick="OpenImage(this)"/></li> 
+            <li><img id="img_54" src="empty.png" data-image="55" alt="SAMPLE TEXT" onclick="OpenImage(this)"/></li> 
+            <li><img id="img_55" src="empty.png" data-image="56" alt="SAMPLE TEXT" onclick="OpenImage(this)"/></li> 
+            <li><img id="img_56" src="empty.png" data-image="57" alt="SAMPLE TEXT" onclick="OpenImage(this)"/></li> 
+            <li><img id="img_57" src="empty.png" data-image="58" alt="SAMPLE TEXT" onclick="OpenImage(this)"/></li> 
+            <li><img id="img_58" src="empty.png" data-image="59" alt="SAMPLE TEXT" onclick="OpenImage(this)"/></li> 
+            <li><img id="img_59" src="empty.png" data-image="60" alt="SAMPLE TEXT" onclick="OpenImage(this)"/></li> 
+            <li><img id="img_60" src="empty.png" data-image="61" alt="SAMPLE TEXT" onclick="OpenImage(this)"/></li> 
+            <li><img id="img_61" src="empty.png" data-image="62" alt="SAMPLE TEXT" onclick="OpenImage(this)"/></li> 
+            <li><img id="img_62" src="empty.png" data-image="63" alt="SAMPLE TEXT" onclick="OpenImage(this)"/></li> 
+            <li><img id="img_63" src="empty.png" data-image="64" alt="SAMPLE TEXT" onclick="OpenImage(this)"/></li> 
+            <li><img id="img_64" src="empty.png" data-image="65" alt="SAMPLE TEXT" onclick="OpenImage(this)"/></li> 
+            <li><img id="img_66" src="empty.png" data-image="67" alt="SAMPLE TEXT" onclick="OpenImage(this)"/></li> 
+            <li><img id="img_67" src="empty.png" data-image="68" alt="SAMPLE TEXT" onclick="OpenImage(this)"/></li> 
+            <li><img id="img_68" src="empty.png" data-image="69" alt="SAMPLE TEXT" onclick="OpenImage(this)"/></li> 
+            <li><img id="img_69" src="empty.png" data-image="70" alt="SAMPLE TEXT" onclick="OpenImage(this)"/></li> 
+            <li><img id="img_70" src="empty.png" data-image="71" alt="SAMPLE TEXT" onclick="OpenImage(this)"/></li> 
+            <li><img id="img_71" src="empty.png" data-image="72" alt="SAMPLE TEXT" onclick="OpenImage(this)"/></li> 
+            <li><img id="img_72" src="empty.png" data-image="73" alt="SAMPLE TEXT" onclick="OpenImage(this)"/></li> 
+            <li><img id="img_73" src="empty.png" data-image="74" alt="SAMPLE TEXT" onclick="OpenImage(this)"/></li> 
+            <li><img id="img_74" src="empty.png" data-image="75" alt="SAMPLE TEXT" onclick="OpenImage(this)"/></li> 
+            <li><img id="img_75" src="empty.png" data-image="76" alt="SAMPLE TEXT" onclick="OpenImage(this)"/></li> 
+            <li><img id="img_76" src="empty.png" data-image="77" alt="SAMPLE TEXT" onclick="OpenImage(this)"/></li> 
+            <li><img id="img_77" src="empty.png" data-image="78" alt="SAMPLE TEXT" onclick="OpenImage(this)"/></li> 
+            <li><img id="img_78" src="empty.png" data-image="79" alt="SAMPLE TEXT" onclick="OpenImage(this)"/></li> 
+            <li><img id="img_79" src="empty.png" data-image="80" alt="SAMPLE TEXT" onclick="OpenImage(this)"/></li> 
+            <li><img id="img_80" src="empty.png" data-image="81" alt="SAMPLE TEXT" onclick="OpenImage(this)"/></li> 
+            <li><img id="img_81" src="empty.png" data-image="82" alt="SAMPLE TEXT" onclick="OpenImage(this)"/></li> 
+            <li><img id="img_82" src="empty.png" data-image="83" alt="SAMPLE TEXT" onclick="OpenImage(this)"/></li> 
+            <li><img id="img_83" src="empty.png" data-image="84" alt="SAMPLE TEXT" onclick="OpenImage(this)"/></li> 
+            <li><img id="img_84" src="empty.png" data-image="85" alt="SAMPLE TEXT" onclick="OpenImage(this)"/></li> 
+            <li><img id="img_85" src="empty.png" data-image="86" alt="SAMPLE TEXT" onclick="OpenImage(this)"/></li> 
+            <li><img id="img_86" src="empty.png" data-image="87" alt="SAMPLE TEXT" onclick="OpenImage(this)"/></li> 
+            <li><img id="img_87" src="empty.png" data-image="88" alt="SAMPLE TEXT" onclick="OpenImage(this)"/></li> 
+            <li><img id="img_88" src="empty.png" data-image="89" alt="SAMPLE TEXT" onclick="OpenImage(this)"/></li> 
+            <li><img id="img_89" src="empty.png" data-image="90" alt="SAMPLE TEXT" onclick="OpenImage(this)"/></li> 
+            <li><img id="img_90" src="empty.png" data-image="91" alt="SAMPLE TEXT" onclick="OpenImage(this)"/></li> 
+            <li><img id="img_91" src="empty.png" data-image="92" alt="SAMPLE TEXT" onclick="OpenImage(this)"/></li> 
+            <li><img id="img_92" src="empty.png" data-image="93" alt="SAMPLE TEXT" onclick="OpenImage(this)"/></li> 
+            <li><img id="img_93" src="empty.png" data-image="94" alt="SAMPLE TEXT" onclick="OpenImage(this)"/></li> 
+            <li><img id="img_94" src="empty.png" data-image="95" alt="SAMPLE TEXT" onclick="OpenImage(this)"/></li> 
+            <li><img id="img_95" src="empty.png" data-image="96" alt="SAMPLE TEXT" onclick="OpenImage(this)"/></li> 
+            <li><img id="img_96" src="empty.png" data-image="97" alt="SAMPLE TEXT" onclick="OpenImage(this)"/></li> 
+            <li><img id="img_97" src="empty.png" data-image="98" alt="SAMPLE TEXT" onclick="OpenImage(this)"/></li> 
+            <li><img id="img_98" src="empty.png" data-image="99" alt="SAMPLE TEXT" onclick="OpenImage(this)"/></li> 
+            <li><img id="img_99" src="empty.png" data-image="100" alt="SAMPLE TEXT" onclick="OpenImage(this)"/></li> 
+            <li><img id="img_100" src="empty.png" data-image="101" alt="SAMPLE TEXT" onclick="OpenImage(this)"/></li> 
+            <li><img id="img_101" src="empty.png" data-image="102" alt="SAMPLE TEXT" onclick="OpenImage(this)"/></li> 
+            <li><img id="img_102" src="empty.png" data-image="103" alt="SAMPLE TEXT" onclick="OpenImage(this)"/></li> 
+            <li><img id="img_103" src="empty.png" data-image="104" alt="SAMPLE TEXT" onclick="OpenImage(this)"/></li> 
+            <li><img id="img_104" src="empty.png" data-image="105" alt="SAMPLE TEXT" onclick="OpenImage(this)"/></li> 
+            <li><img id="img_105" src="empty.png" data-image="106" alt="SAMPLE TEXT" onclick="OpenImage(this)"/></li> 
+            <li><img id="img_106" src="empty.png" data-image="107" alt="SAMPLE TEXT" onclick="OpenImage(this)"/></li> 
+            <li>
+              <span style="font-size: 2em; animation-delay: .5s;" class="hue_rotate">❤️</span>
+              <span style="font-size: 3em; animation-delay: 1s;" class="hue_rotate">❤️</span>
+              <span style="font-size: 4em; animation-delay: 1.5s;" class="hue_rotate">❤️</span>
+              <span style="font-size: 3em; animation-delay: 1s;" class="hue_rotate">❤️</span>
+              <span style="font-size: 2em; animation-delay: .5s;" class="hue_rotate">❤️</span>
+            </li>
+        </ul>
+      </main>
+      <div id="bar_after">
+        <ul>
+          <!--Image thumbnails added using JS-->
+        </ul>
+      </div>
+<script src="js.js"></script>
+</body>
+</html>
